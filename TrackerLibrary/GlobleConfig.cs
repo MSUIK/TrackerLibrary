@@ -20,6 +20,8 @@ namespace TrackerLibrary
             if(textFiles)
             {
                 //TODO - Create the textFile Conection
+                TextConnector text = new TextConnector();
+                Connections.Add(text);
             }
         }
     }
