@@ -70,7 +70,6 @@
     <Compile Include="TournamentDashBoardForm.Designer.cs">
       <DependentUpon>TournamentDashBoardForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TournamentModel.cs" />
     <Compile Include="TournamentViewerForm.cs">
       <SubType>Form</SubType>
     </Compile>
