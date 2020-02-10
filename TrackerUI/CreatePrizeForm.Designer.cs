@@ -34,7 +34,7 @@
             this.placeNumberLabel = new System.Windows.Forms.Label();
             this.prizePercentageValue = new System.Windows.Forms.TextBox();
             this.PrizePercentageLabel = new System.Windows.Forms.Label();
-            this.prizeValue = new System.Windows.Forms.TextBox();
+            this.prizeAmountValue = new System.Windows.Forms.TextBox();
             this.prizeAmountLabel = new System.Windows.Forms.Label();
             this.placeNameValue = new System.Windows.Forms.TextBox();
             this.placeNameLabel = new System.Windows.Forms.Label();
@@ -89,12 +89,12 @@
             this.PrizePercentageLabel.TabIndex = 19;
             this.PrizePercentageLabel.Text = "Prize Percentage";
             // 
-            // prizeValue
+            // prizeAmountValue
             // 
-            this.prizeValue.Location = new System.Drawing.Point(219, 182);
-            this.prizeValue.Name = "prizeValue";
-            this.prizeValue.Size = new System.Drawing.Size(200, 35);
-            this.prizeValue.TabIndex = 22;
+            this.prizeAmountValue.Location = new System.Drawing.Point(219, 182);
+            this.prizeAmountValue.Name = "prizeAmountValue";
+            this.prizeAmountValue.Size = new System.Drawing.Size(200, 35);
+            this.prizeAmountValue.TabIndex = 22;
             // 
             // prizeAmountLabel
             // 
@@ -162,7 +162,7 @@
             this.Controls.Add(this.orLabel);
             this.Controls.Add(this.placeNameValue);
             this.Controls.Add(this.placeNameLabel);
-            this.Controls.Add(this.prizeValue);
+            this.Controls.Add(this.prizeAmountValue);
             this.Controls.Add(this.prizeAmountLabel);
             this.Controls.Add(this.prizePercentageValue);
             this.Controls.Add(this.PrizePercentageLabel);
@@ -186,7 +186,7 @@
         private System.Windows.Forms.Label placeNumberLabel;
         private System.Windows.Forms.TextBox prizePercentageValue;
         private System.Windows.Forms.Label PrizePercentageLabel;
-        private System.Windows.Forms.TextBox prizeValue;
+        private System.Windows.Forms.TextBox prizeAmountValue;
         private System.Windows.Forms.Label prizeAmountLabel;
         private System.Windows.Forms.TextBox placeNameValue;
         private System.Windows.Forms.Label placeNameLabel;

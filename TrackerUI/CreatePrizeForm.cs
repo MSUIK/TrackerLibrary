@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrackerLibrary;
 
 namespace TrackerUI
 {
@@ -25,6 +26,11 @@ namespace TrackerUI
         {
             if(ValidateForm())
             {
+                PrizeModel model = new PrizeModel(
+                    placeNameValue.Text,
+                    placeNumberValue.Text,
+                    prizeAmountValue.Text, 
+                    prizePercentageValue.Text);
 
             }
 
@@ -35,10 +41,13 @@ namespace TrackerUI
             bool output = true;
             int placeNumber = 0;
             decimal prizeAmount = 0;
-            int prizePercentage = 0;
-            bool prizeAmountValid = decimal.TryParse(prizeAmountLabel.Text, out prizeAmount);
-            bool prizePercentageValid = int.TryParse(prizePercentageValue.Text, out prizePercentage);
-            bool placeNumberValidNumber = int.TryParse(placeNumberValue.Text, out placeNumber);
+            double prizePercentage = 0;
+            bool prizeAmountValid = decimal.TryParse(
+                prizeAmountLabel.Text, out prizeAmount);
+            bool prizePercentageValid = double.TryParse(
+                prizePercentageValue.Text, out prizePercentage);
+            bool placeNumberValidNumber = int.TryParse(
+                placeNumberValue.Text, out placeNumber);
             if (!placeNumberValidNumber)
             {
                 output = false;
