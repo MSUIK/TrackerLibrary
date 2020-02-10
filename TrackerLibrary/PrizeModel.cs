@@ -6,6 +6,7 @@ namespace TrackerLibrary
 {
    public class PrizeModel
     {
+        public int  id { get; set; }
         /// <summary>
         /// Prize place number
         /// </summary>
