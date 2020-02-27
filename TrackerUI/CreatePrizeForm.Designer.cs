@@ -58,7 +58,8 @@
             this.placeNumberValue.Location = new System.Drawing.Point(219, 86);
             this.placeNumberValue.Name = "placeNumberValue";
             this.placeNumberValue.Size = new System.Drawing.Size(200, 35);
-            this.placeNumberValue.TabIndex = 18;
+            this.placeNumberValue.TabIndex = 1;
+            this.placeNumberValue.TextChanged += new System.EventHandler(this.placeNumberValue_TextChanged);
             // 
             // placeNumberLabel
             // 
@@ -76,7 +77,8 @@
             this.prizePercentageValue.Location = new System.Drawing.Point(220, 297);
             this.prizePercentageValue.Name = "prizePercentageValue";
             this.prizePercentageValue.Size = new System.Drawing.Size(200, 35);
-            this.prizePercentageValue.TabIndex = 20;
+            this.prizePercentageValue.TabIndex = 4;
+            this.prizePercentageValue.Text = "0";
             // 
             // PrizePercentageLabel
             // 
@@ -94,7 +96,7 @@
             this.prizeAmountValue.Location = new System.Drawing.Point(219, 182);
             this.prizeAmountValue.Name = "prizeAmountValue";
             this.prizeAmountValue.Size = new System.Drawing.Size(200, 35);
-            this.prizeAmountValue.TabIndex = 22;
+            this.prizeAmountValue.TabIndex = 3;
             // 
             // prizeAmountLabel
             // 
@@ -112,7 +114,8 @@
             this.placeNameValue.Location = new System.Drawing.Point(219, 135);
             this.placeNameValue.Name = "placeNameValue";
             this.placeNameValue.Size = new System.Drawing.Size(200, 35);
-            this.placeNameValue.TabIndex = 24;
+            this.placeNameValue.TabIndex = 2;
+            this.placeNameValue.TextChanged += new System.EventHandler(this.placeNameValue_TextChanged);
             // 
             // placeNameLabel
             // 
@@ -147,7 +150,7 @@
             this.createPrizeButton.Location = new System.Drawing.Point(156, 383);
             this.createPrizeButton.Name = "createPrizeButton";
             this.createPrizeButton.Size = new System.Drawing.Size(205, 51);
-            this.createPrizeButton.TabIndex = 26;
+            this.createPrizeButton.TabIndex = 5;
             this.createPrizeButton.Text = "Create Prize";
             this.createPrizeButton.UseVisualStyleBackColor = true;
             this.createPrizeButton.Click += new System.EventHandler(this.createPrizeButton_Click);

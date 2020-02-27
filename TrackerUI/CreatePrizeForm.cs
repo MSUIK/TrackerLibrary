@@ -24,14 +24,22 @@ namespace TrackerUI
         /// <param name="e"></param>
         private void createPrizeButton_Click(object sender, EventArgs e)
         {
-            if(ValidateForm())
+          if(ValidateForm())
             {
                 PrizeModel model = new PrizeModel(
                     placeNameValue.Text,
                     placeNumberValue.Text,
                     prizeAmountValue.Text, 
                     prizePercentageValue.Text);
+                foreach(IDataConnection db in GlobleConfig.Connections)
+                {
+                    db.CreatePrize(model);
+                }
 
+            }
+          else
+            {
+                MessageBox.Show("This form ha invslid information. Pleas Check it and try again");
             }
 
         }
@@ -42,7 +50,7 @@ namespace TrackerUI
             int placeNumber = 0;
             decimal prizeAmount = 0;
             double prizePercentage = 0;
-            bool prizeAmountValid = decimal.TryParse(
+         bool prizeAmountValid = decimal.TryParse(
                 prizeAmountLabel.Text, out prizeAmount);
             bool prizePercentageValid = double.TryParse(
                 prizePercentageValue.Text, out prizePercentage);
@@ -76,6 +84,16 @@ namespace TrackerUI
            
 
             return output;
+        }
+
+        private void placeNumberValue_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void placeNameValue_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
