@@ -51,7 +51,7 @@ namespace TrackerUI
             decimal prizeAmount = 0;
             double prizePercentage = 0;
          bool prizeAmountValid = decimal.TryParse(
-                prizeAmountLabel.Text, out prizeAmount);
+                prizeAmountValue.Text, out prizeAmount);
             bool prizePercentageValid = double.TryParse(
                 prizePercentageValue.Text, out prizePercentage);
             bool placeNumberValidNumber = int.TryParse(
@@ -69,7 +69,7 @@ namespace TrackerUI
                 output = false;
             }
             
-            if(!prizeAmountValid || !prizePercentageValid)
+            if(prizeAmountValid ==false || prizePercentageValid == false)
             {
                 output = false;
             }
